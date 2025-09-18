@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "snake-flask.fullname" . }}
+  name: {{ .Release.Name }}
   labels:
-    app: {{ include "snake-flask.fullname" . }}
+    app: {{ .Release.Name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "snake-flask.fullname" . }}
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ include "snake-flask.fullname" . }}
+        app: {{ .Release.Name }}
     spec:
       containers:
-        - name: snake-flask
+        - name: {{ .Release.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: 5000
+            - containerPort: {{ .Values.service.port }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }
+            {{- toYaml .Values.resources | nindent 12 }}
