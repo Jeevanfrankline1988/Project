@@ -54,9 +54,15 @@ A simple **Snake Game** built with **Flask**, Dockerized, deployed with **Helm**
 ```mermaid
 flowchart LR
     A[👨‍💻 Developer] --> B[GitHub Repo]
-    B --> C[Jenkins CI/CD]
-    C --> D[🐳 Docker Build & Push]
-    D --> E[☸️ Helm Chart Deployment]
-    E --> F[🚀 ArgoCD Sync]
-    F --> G[Kubernetes Cluster - Snake Game]
+
+    B --> C[✅ Jenkins Pipeline]
+    C --> D[🧪 Unit Tests (/tests)]
+    C --> E[📊 SonarQube Code Analysis]
+
+    D --> F[🐳 Docker Build & Push]
+    E --> F
+
+    F --> G[☸️ Helm Chart Deployment]
+    G --> H[🚀 ArgoCD GitOps Sync]
+    H --> I[Kubernetes Cluster - Snake Game 🎮]
 ```
