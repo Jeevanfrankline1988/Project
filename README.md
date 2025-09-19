@@ -27,7 +27,7 @@ A simple **Snake Game** built with **Flask**, Dockerized, deployed with **Helm**
 └── sonar-project.properties
 ```
 
-## Features
+## ✨ Features
 
 * Snake Game UI – Classic snake game built with Flask + HTML/CSS.
 
@@ -47,5 +47,16 @@ A simple **Snake Game** built with **Flask**, Dockerized, deployed with **Helm**
 
 * Configurable Secrets – Secure handling of credentials for Kubernetes.
 
-* Scalable & Cloud-Native – Can run on any Kubernetes cluster (Kind, Minikube, EKS, GKE, AKS
+* Scalable & Cloud-Native – Can run on any Kubernetes cluster (Kind, Minikube, EKS, GKE, AKS)
 
+## 📊 CI/CD Pipeline
+
+```mermaid
+flowchart LR
+    A[👨‍💻 Developer] --> B[GitHub Repo]
+    B --> C[Jenkins CI/CD]
+    C --> D[🐳 Docker Build & Push]
+    D --> E[☸️ Helm Chart Deployment]
+    E --> F[🚀 ArgoCD Sync]
+    F --> G[Kubernetes Cluster - Snake Game]
+```
