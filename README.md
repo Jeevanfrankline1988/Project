@@ -68,3 +68,7 @@ flowchart LR
     H --> I[Kubernetes Cluster - Snake Game]
 
 ```
+
+## 🎮 Demo - Snake Game
+
+![Snake Game UI](docs/game.png)
