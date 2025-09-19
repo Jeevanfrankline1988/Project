@@ -52,6 +52,7 @@ A simple **Snake Game** built with **Flask**, Dockerized, deployed with **Helm**
 ## 📊 CI/CD Pipeline
 
 ```mermaid
+
 flowchart LR
     A[Developer] --> B[GitHub Repo]
 
@@ -65,4 +66,5 @@ flowchart LR
     F --> G[Helm Chart Deployment]
     G --> H[ArgoCD GitOps Sync]
     H --> I[Kubernetes Cluster - Snake Game]
+
 ```
