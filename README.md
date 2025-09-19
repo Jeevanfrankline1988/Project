@@ -153,28 +153,37 @@ nodes:
 kind create cluster --config kind-config.yaml
 kind get clusters
 ```
+
 ### 6️⃣ Install Kubectl
 
 ```
 curl -LO "https://dl.k8s.io/release/$(curl -sL https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
+
 ```
+
 ### 7️⃣ Install ArgoCD
 
 ```
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 kubectl get pods -n argocd
+
 ```
+
 ### 8️⃣ Install Helm
 
 ```
+sudo apt-get update
+sudo apt-get install -y curl apt-transport-https gnupg
 curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
-sudo apt-get install apt-transport-https --yes
 echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 sudo apt-get update
-sudo apt-get install helm
+sudo apt-get install -y helm
+
 ```
+
+
 
 
