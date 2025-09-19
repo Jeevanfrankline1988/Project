@@ -4,7 +4,8 @@ A simple **Snake Game** built with **Flask**, Dockerized, deployed with **Helm**
 
 ## 📂 Project Structure
 
-'''
+```
+
 ├── argocd/
 │   └── application.yaml
 ├── helm-chart/
@@ -24,5 +25,5 @@ A simple **Snake Game** built with **Flask**, Dockerized, deployed with **Helm**
 ├── Dockerfile
 ├── requirements.txt
 └── sonar-project.properties
+```
 
-'''
