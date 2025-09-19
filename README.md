@@ -72,3 +72,9 @@ flowchart LR
 ## 🎮 Demo - Snake Game
 
 ![Snake Game UI](docs/game.png)
+
+## 🚀 Argocd Deployment View
+
+![argocd UI](docs/argocd.png)
+
+
