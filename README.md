@@ -57,7 +57,7 @@ flowchart LR
     A[Developer] --> B[GitHub Repo]
 
     B --> C[Jenkins Pipeline]
-    C --> D[Unit Tests (/tests)]
+    C --> D[Unit Tests - tests folder]
     C --> E[SonarQube Code Analysis]
 
     D --> F[Docker Build & Push]
