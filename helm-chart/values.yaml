@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: jeevan725/pygame   # Replace with your DockerHub/GHCR repo
-  tag: "v203"
+  tag: "v204"
   pullPolicy: IfNotPresent
 
 service:
